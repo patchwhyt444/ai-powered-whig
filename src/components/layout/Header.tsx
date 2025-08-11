@@ -12,7 +12,7 @@ const Header = () => {
     { label: "Who We Are", href: "/who-we-are" },
     { label: "About Us", href: "/about" },
     { label: "Sell Fast", href: "/sell-fast" },
-    { label: "Buyers List", href: "#buyers" },
+    { label: "Buyers List", href: "/buyers-list" },
     { label: "Wholesalers JV", href: "#wholesalers" },
   ];
 

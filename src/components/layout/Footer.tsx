@@ -17,7 +17,7 @@ const Footer = () => {
           <Link to="/who-we-are" className="hover:opacity-80">Who We Are</Link>
           <Link to="/about" className="hover:opacity-80">About Us</Link>
           <a href="/sell-fast" className="hover:opacity-80">Sell Fast</a>
-          <a href="#buyers" className="hover:opacity-80">Buyers List</a>
+          <Link to="/buyers-list" className="hover:opacity-80">Buyers List</Link>
           <a href="#wholesalers" className="hover:opacity-80">Wholesalers JV</a>
         </nav>
         <div className="text-sm">
