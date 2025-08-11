@@ -10,6 +10,7 @@ import About from "./pages/About";
 import SellFast from "./pages/SellFast";
 import NotFound from "./pages/NotFound";
 import BuyersList from "./pages/BuyersList";
+import WholesalersJV from "./pages/WholesalersJV";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/sell-fast" element={<SellFast />} />
           <Route path="/buyers-list" element={<BuyersList />} />
+          <Route path="/wholesalers-jv" element={<WholesalersJV />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

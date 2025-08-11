@@ -13,7 +13,7 @@ const Header = () => {
     { label: "About Us", href: "/about" },
     { label: "Sell Fast", href: "/sell-fast" },
     { label: "Buyers List", href: "/buyers-list" },
-    { label: "Wholesalers JV", href: "#wholesalers" },
+    { label: "Wholesalers JV", href: "/wholesalers-jv" },
   ];
 
   return (

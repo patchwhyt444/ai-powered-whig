@@ -18,7 +18,7 @@ const Footer = () => {
           <Link to="/about" className="hover:opacity-80">About Us</Link>
           <a href="/sell-fast" className="hover:opacity-80">Sell Fast</a>
           <Link to="/buyers-list" className="hover:opacity-80">Buyers List</Link>
-          <a href="#wholesalers" className="hover:opacity-80">Wholesalers JV</a>
+          <Link to="/wholesalers-jv" className="hover:opacity-80">Wholesalers JV</Link>
         </nav>
         <div className="text-sm">
           <p>Fayetteville, NC</p>
