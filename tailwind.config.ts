@@ -61,6 +61,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				brand: {
+					gold: 'hsl(var(--brand-gold))',
+					'gold-foreground': 'hsl(var(--brand-gold-foreground))',
+					black: 'hsl(var(--brand-dark))'
 				}
 			},
 			borderRadius: {
@@ -89,6 +94,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				sans: ['var(--font-sans)']
 			}
 		}
 	},
