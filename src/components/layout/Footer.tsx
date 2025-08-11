@@ -15,6 +15,7 @@ const Footer = () => {
         <nav className="grid gap-2 text-sm">
           <a href="#investing" className="hover:opacity-80">Start Investing</a>
           <Link to="/who-we-are" className="hover:opacity-80">Who We Are</Link>
+          <Link to="/about" className="hover:opacity-80">About Us</Link>
           <a href="/sell-fast" className="hover:opacity-80">Sell Fast</a>
           <a href="#buyers" className="hover:opacity-80">Buyers List</a>
           <a href="#wholesalers" className="hover:opacity-80">Wholesalers JV</a>

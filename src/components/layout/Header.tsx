@@ -10,6 +10,7 @@ const Header = () => {
   const navItems = [
     { label: "Start Investing", href: "#investing" },
     { label: "Who We Are", href: "/who-we-are" },
+    { label: "About Us", href: "/about" },
     { label: "Sell Fast", href: "/sell-fast" },
     { label: "Buyers List", href: "#buyers" },
     { label: "Wholesalers JV", href: "#wholesalers" },
