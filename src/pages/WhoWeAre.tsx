@@ -41,7 +41,7 @@ const WhoWeAre = () => {
                 Who We Are
               </h1>
               <p className="text-lg text-muted-foreground mb-4">
-                White House Investment Group is a veteran-owned, family-run real estate investment company dedicated to empowering investors across North Carolina. We understand that real estate is more than transactions—it's about building wealth and securing futures.
+                White House Investment Group is a veteran-owned, family-run real estate investment company founded by Patrick, who was born and raised in Darien, GA. After graduating high school, he served in the United States Army, where he discovered a passion for real estate—binging BiggerPockets, devouring books, earning his license, and investing himself. Helping investors across fix & flips, long-term rentals, short-term rentals, and commercial assets revealed a gap: too few agents truly understood investors. That gap inspired the creation of White House Investment Group.
               </p>
               <p className="text-lg text-muted-foreground">
                 Our investor-first approach focuses on cap rates, BRRRR strategies, value-add opportunities, and creative financing. We provide concierge service for new investors while offering seamless support for seasoned professionals.
@@ -51,8 +51,8 @@ const WhoWeAre = () => {
               <Card className="overflow-hidden">
                 <CardContent className="p-0">
                   <img
-                    src="/lovable-uploads/2ba1a4bd-668f-449a-84f8-3ac52ab3c5d6.png"
-                    alt="White House Investment Group team"
+                    src="/lovable-uploads/7ded6667-e8cc-44ac-9ff0-cd5377ea0372.png"
+                    alt="White House Investment Group family photo"
                     className="w-full h-auto object-cover"
                     loading="lazy"
                   />
