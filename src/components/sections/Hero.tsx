@@ -4,7 +4,7 @@ import renovationHero from "@/assets/renovation-hero.jpg";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden">
-      <img src={renovationHero} alt="Home being renovated background" className="absolute inset-0 h-full w-full object-cover opacity-25" aria-hidden />
+      <img src={renovationHero} alt="Home being renovated background" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25" aria-hidden />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-200px,hsl(var(--brand-gold)/0.2),transparent)]" />
       <div className="container grid md:grid-cols-2 gap-10 py-16 md:py-24 items-center">
         <div>
