@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import BrandLogo from "@/components/BrandLogo";
 
 const Footer = () => {
@@ -12,7 +14,7 @@ const Footer = () => {
         </div>
         <nav className="grid gap-2 text-sm">
           <a href="#investing" className="hover:opacity-80">Start Investing</a>
-          <a href="#about" className="hover:opacity-80">Who We Are</a>
+          <Link to="/who-we-are" className="hover:opacity-80">Who We Are</Link>
           <a href="/sell-fast" className="hover:opacity-80">Sell Fast</a>
           <a href="#buyers" className="hover:opacity-80">Buyers List</a>
           <a href="#wholesalers" className="hover:opacity-80">Wholesalers JV</a>

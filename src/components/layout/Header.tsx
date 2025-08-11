@@ -1,4 +1,6 @@
+
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import BrandLogo from "@/components/BrandLogo";
 import { Button } from "@/components/ui/button";
 
@@ -7,7 +9,7 @@ const Header = () => {
 
   const navItems = [
     { label: "Start Investing", href: "#investing" },
-    { label: "Who We Are", href: "#about" },
+    { label: "Who We Are", href: "/who-we-are" },
     { label: "Sell Fast", href: "/sell-fast" },
     { label: "Buyers List", href: "#buyers" },
     { label: "Wholesalers JV", href: "#wholesalers" },
@@ -19,9 +21,15 @@ const Header = () => {
         <BrandLogo />
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="text-sm font-medium hover:opacity-80 transition-opacity">
-              {item.label}
-            </a>
+            item.href.startsWith('#') ? (
+              <a key={item.label} href={item.href} className="text-sm font-medium hover:opacity-80 transition-opacity">
+                {item.label}
+              </a>
+            ) : (
+              <Link key={item.label} to={item.href} className="text-sm font-medium hover:opacity-80 transition-opacity">
+                {item.label}
+              </Link>
+            )
           ))}
           <Button asChild variant="gold" size="lg">
             <a href="#book">Book Consultation</a>
@@ -42,9 +50,15 @@ const Header = () => {
         <div className="md:hidden bg-background border-t">
           <div className="container py-4 grid gap-4">
             {navItems.map((item) => (
-              <a key={item.label} href={item.href} className="py-2" onClick={() => setOpen(false)}>
-                {item.label}
-              </a>
+              item.href.startsWith('#') ? (
+                <a key={item.label} href={item.href} className="py-2" onClick={() => setOpen(false)}>
+                  {item.label}
+                </a>
+              ) : (
+                <Link key={item.label} to={item.href} className="py-2" onClick={() => setOpen(false)}>
+                  {item.label}
+                </Link>
+              )
             ))}
             <Button asChild variant="gold" size="lg">
               <a href="#book" onClick={() => setOpen(false)}>Book Consultation</a>
