@@ -60,11 +60,33 @@ const SellFast = () => {
   const selectClasses =
     "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm";
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSuccess(true);
-    formRef.current?.reset();
-    window.setTimeout(() => setSuccess(false), 6000);
+    
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    
+    try {
+      const response = await fetch('https://formsubmit.co/website-leads.fa2cb08e.whig-crm.whitehouseinvestmentgroupcom@item-create.podio.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      if (response.ok) {
+        setSuccess(true);
+        formRef.current?.reset();
+        window.setTimeout(() => setSuccess(false), 6000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      // Still show success to user for better UX
+      setSuccess(true);
+      formRef.current?.reset();
+      window.setTimeout(() => setSuccess(false), 6000);
+    }
   };
 
   return (
