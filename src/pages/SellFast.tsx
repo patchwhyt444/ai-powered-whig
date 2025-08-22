@@ -64,15 +64,12 @@ const SellFast = () => {
     e.preventDefault();
     
     const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+    formData.append('_subject', 'New submission from Sell Fast page');
     
     try {
       const response = await fetch('https://formsubmit.co/website-leads.fa2cb08e.whig-crm.whitehouseinvestmentgroupcom@item-create.podio.com', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+        body: formData,
       });
       
       if (response.ok) {
