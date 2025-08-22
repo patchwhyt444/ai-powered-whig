@@ -60,43 +60,10 @@ const SellFast = () => {
   const selectClasses =
     "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm";
 
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Form submission started');
-    
-    const formData = new FormData(e.currentTarget);
-    formData.append('_subject', 'New submission from Sell Fast page');
-    formData.append('_captcha', 'false');
-    
-    console.log('Form data prepared:', Object.fromEntries(formData.entries()));
-    
-    try {
-      console.log('Sending request to FormSubmit...');
-      const response = await fetch('https://formsubmit.co/website-leads.fa2cb08e.whig-crm.whitehouseinvestmentgroupcom@item-create.podio.com', {
-        method: 'POST',
-        body: formData,
-      });
-      
-      console.log('Response status:', response.status);
-      console.log('Response ok:', response.ok);
-      
-      if (response.ok) {
-        console.log('Form submitted successfully');
-        setSuccess(true);
-        formRef.current?.reset();
-        window.setTimeout(() => setSuccess(false), 6000);
-      } else {
-        console.error('Form submission failed with status:', response.status);
-        const responseText = await response.text();
-        console.error('Response text:', responseText);
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      // Still show success to user for better UX
-      setSuccess(true);
-      formRef.current?.reset();
-      window.setTimeout(() => setSuccess(false), 6000);
-    }
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Let the form submit naturally to FormSubmit
+    setSuccess(true);
+    window.setTimeout(() => setSuccess(false), 6000);
   };
 
   return (
@@ -131,7 +98,14 @@ const SellFast = () => {
                 <h2 className="text-xl sm:text-2xl font-bold">Get Your No-Obligation Offer</h2>
                 <p className="mt-1 text-sm text-muted-foreground">We’ll never share your info.</p>
 
-                <form id="seller-form" ref={formRef} onSubmit={onSubmit} className="mt-6 space-y-5" method="post">
+                <form 
+                  id="seller-form" 
+                  ref={formRef} 
+                  onSubmit={onSubmit} 
+                  className="mt-6 space-y-5" 
+                  action="https://formsubmit.co/website-leads.fa2cb08e.whig-crm.whitehouseinvestmentgroupcom@item-create.podio.com"
+                  method="POST"
+                >
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-semibold">First Name</label>
@@ -224,6 +198,12 @@ const SellFast = () => {
                     <label htmlFor="photos" className="block text-sm font-semibold">Property Photos (optional)</label>
                     <input id="photos" name="photos" type="file" multiple accept="image/*" className="mt-2 block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-primary file:text-primary-foreground hover:file:bg-primary/90" />
                   </div>
+
+                  
+                  {/* Hidden fields for FormSubmit configuration */}
+                  <input type="hidden" name="_subject" value="New submission from Sell Fast page" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value={window.location.origin + "/sell-fast?success=true"} />
 
                   <div className="flex items-center gap-4 pt-2">
                     <Button type="submit" variant="gold" size="lg">Get My Offer</Button>
