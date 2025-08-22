@@ -74,7 +74,7 @@ const WholesalersJV = () => {
                   Wholesaling Laws Are Changing — Stay Compliant by Partnering with a Licensed Agent
                 </h2>
                 <p className="mt-4 text-base leading-relaxed">
-                  As more states — including parts of North Carolina — begin cracking down on unlicensed wholesaling, working with a licensed agent is no longer optional… it’s smart business. At White House Investment Group, we offer compliant, win-win JV opportunities that allow you to legally dispo deals without risking fines or violations. We charge a reasonable JV fee, handle communication with buyers, and make sure both sides of the deal are protected.
+                  As more states — including parts of North Carolina — begin cracking down on unlicensed wholesaling, working with a licensed agent is no longer optional… it's smart business. At White House Investment Group, we offer compliant, win-win JV opportunities that allow you to legally dispo deals without risking fines or violations. We charge a reasonable JV fee, handle communication with buyers, and make sure both sides of the deal are protected.
                 </p>
               </CardContent>
             </Card>
@@ -85,10 +85,10 @@ const WholesalersJV = () => {
         <section className="py-12 sm:py-16">
           <div className="container max-w-3xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-              Let’s JV and Close More Deals Together
+              Let's JV and Close More Deals Together
             </h1>
             <p className="mt-5 text-lg leading-relaxed">
-              Got a great deal but need help finding a buyer or getting it across the finish line? Let’s team up. We specialize in dispo, underwriting, and closing — so you can focus on locking up more properties while we handle the back end.
+              Got a great deal but need help finding a buyer or getting it across the finish line? Let's team up. We specialize in dispo, underwriting, and closing — so you can focus on locking up more properties while we handle the back end.
             </p>
           </div>
         </section>
@@ -98,10 +98,10 @@ const WholesalersJV = () => {
           <div className="container grid gap-6 sm:gap-8 md:grid-cols-3">
             {[{
               title: "Submit Your Deal",
-              desc: "Send us the details of your property — we’ll underwrite it, verify the numbers, and evaluate it fast.",
+              desc: "Send us the details of your property — we'll underwrite it, verify the numbers, and evaluate it fast.",
             },{
               title: "We Handle the Dispo",
-              desc: "We’ll market it to our active buyer list, schedule walkthroughs, and negotiate the best exit strategy.",
+              desc: "We'll market it to our active buyer list, schedule walkthroughs, and negotiate the best exit strategy.",
             },{
               title: "We Close and Split the Fee",
               desc: "Once it closes, we split the assignment — simple, fast, and fully transparent.",
@@ -116,12 +116,12 @@ const WholesalersJV = () => {
           </div>
         </section>
 
-        {/* What We’re Looking For — VERBATIM */}
+        {/* What We're Looking For — VERBATIM */}
         <section className="py-12">
           <div className="container">
             <Card>
               <CardContent className="p-6 sm:p-8">
-                <h2 className="text-2xl sm:text-3xl font-extrabold">Ideal JV Deals We’re Looking For</h2>
+                <h2 className="text-2xl sm:text-3xl font-extrabold">Ideal JV Deals We're Looking For</h2>
                 <ul className="mt-6 space-y-3 list-disc pl-6 text-base">
                   <li>Off-market residential or commercial properties</li>
                   <li>Assignable or under-contract deals (clean paperwork)</li>
@@ -129,7 +129,7 @@ const WholesalersJV = () => {
                   <li>Distressed, inherited, vacant, or value-add opportunities</li>
                   <li>Sellers open to creative finance</li>
                 </ul>
-                <p className="mt-6 text-base">Not sure if your deal qualifies? Submit it anyway — we’ll give you feedback fast.</p>
+                <p className="mt-6 text-base">Not sure if your deal qualifies? Submit it anyway — we'll give you feedback fast.</p>
               </CardContent>
             </Card>
           </div>
@@ -142,7 +142,7 @@ const WholesalersJV = () => {
               <CardContent className="p-6 sm:p-8">
                 <header>
                   <h2 className="text-2xl sm:text-3xl font-extrabold">Submit a Deal to JV</h2>
-                  <p className="mt-2 text-base">Provide the details below and we’ll follow up promptly.</p>
+                  <p className="mt-2 text-base">Provide the details below and we'll follow up promptly.</p>
                 </header>
 
                 <form 
@@ -200,9 +200,8 @@ const WholesalersJV = () => {
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_next" value={window.location.origin + "/wholesalers-jv?success=true"} />
 
-                  <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                  <div className="md:col-span-2">
                     <Button type="submit" variant="gold" size="lg">Submit Your Deal Now</Button>
-                    <p className="text-sm text-muted-foreground">“Email notifications should go directly to you (or to your CRM).”</p>
                   </div>
                 </form>
               </CardContent>
@@ -216,7 +215,7 @@ const WholesalersJV = () => {
             <Card>
               <CardContent className="p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <h3 className="text-xl sm:text-2xl font-extrabold text-center sm:text-left">
-                  Let’s close more deals — the right way.
+                  Let's close more deals — the right way.
                 </h3>
                 <Button asChild variant="gold" size="lg">
                   <a href="#jv-form">Submit Your Deal Now</a>
