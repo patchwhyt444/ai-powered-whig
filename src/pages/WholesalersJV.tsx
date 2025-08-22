@@ -145,7 +145,12 @@ const WholesalersJV = () => {
                   <p className="mt-2 text-base">Provide the details below and we’ll follow up promptly.</p>
                 </header>
 
-                <form action="{{FORM_POST_URL}}" method="POST" encType="multipart/form-data" className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <form 
+                  action="https://formsubmit.co/website-leads.fa2cb08e.whig-crm.whitehouseinvestmentgroupcom@item-create.podio.com" 
+                  method="POST" 
+                  encType="multipart/form-data" 
+                  className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6"
+                >
                   <div className="flex flex-col">
                     <label htmlFor="full_name" className="text-sm font-medium">Full Name*</label>
                     <Input id="full_name" name="full_name" type="text" required className="mt-2" />
@@ -189,6 +194,11 @@ const WholesalersJV = () => {
                     <label htmlFor="files" className="text-sm font-medium">Upload: Photos, contract, supporting docs</label>
                     <input id="files" name="files" type="file" multiple className="mt-2 block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-primary file:text-primary-foreground hover:file:bg-primary/90" />
                   </div>
+
+                  {/* Hidden fields for FormSubmit configuration */}
+                  <input type="hidden" name="_subject" value="New submission from Wholesaler JV page" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value={window.location.origin + "/wholesalers-jv?success=true"} />
 
                   <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-3">
                     <Button type="submit" variant="gold" size="lg">Submit Your Deal Now</Button>
