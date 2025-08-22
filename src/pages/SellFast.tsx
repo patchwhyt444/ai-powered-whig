@@ -122,6 +122,7 @@ const SellFast = () => {
                 <p className="mt-1 text-sm text-muted-foreground">We’ll never share your info.</p>
 
                 <form id="seller-form" ref={formRef} onSubmit={onSubmit} className="mt-6 space-y-5" method="post">
+                  <input type="hidden" name="_subject" value="New submission from Sell Fast page" />
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-semibold">First Name</label>
