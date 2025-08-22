@@ -62,20 +62,33 @@ const SellFast = () => {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log('Form submission started');
     
     const formData = new FormData(e.currentTarget);
     formData.append('_subject', 'New submission from Sell Fast page');
+    formData.append('_captcha', 'false');
+    
+    console.log('Form data prepared:', Object.fromEntries(formData.entries()));
     
     try {
+      console.log('Sending request to FormSubmit...');
       const response = await fetch('https://formsubmit.co/website-leads.fa2cb08e.whig-crm.whitehouseinvestmentgroupcom@item-create.podio.com', {
         method: 'POST',
         body: formData,
       });
       
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
+      
       if (response.ok) {
+        console.log('Form submitted successfully');
         setSuccess(true);
         formRef.current?.reset();
         window.setTimeout(() => setSuccess(false), 6000);
+      } else {
+        console.error('Form submission failed with status:', response.status);
+        const responseText = await response.text();
+        console.error('Response text:', responseText);
       }
     } catch (error) {
       console.error('Form submission error:', error);
