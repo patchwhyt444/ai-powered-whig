@@ -66,19 +66,13 @@ const SellFast = () => {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
     
-    // Add subject to the data
-    const submissionData = {
-      ...data,
-      _subject: "New submission from Sell Fast page"
-    };
-    
     try {
       const response = await fetch('https://formsubmit.co/website-leads.fa2cb08e.whig-crm.whitehouseinvestmentgroupcom@item-create.podio.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(submissionData),
+        body: JSON.stringify(data),
       });
       
       if (response.ok) {
@@ -128,7 +122,6 @@ const SellFast = () => {
                 <p className="mt-1 text-sm text-muted-foreground">We’ll never share your info.</p>
 
                 <form id="seller-form" ref={formRef} onSubmit={onSubmit} className="mt-6 space-y-5" method="post">
-                  <input type="hidden" name="_subject" value="New submission from Sell Fast page" />
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-semibold">First Name</label>
