@@ -86,8 +86,8 @@ const SellFast = () => {
                 <Button asChild variant="gold" size="lg">
                   <a href="#seller-form">Get My Cash Offer</a>
                 </Button>
-                <a href="tel:252-378-2016" className="text-sm font-semibold underline underline-offset-4">
-                  Call: 252-378-2016
+                <a href="tel:(910) 207-5470" className="text-sm font-semibold underline underline-offset-4">
+                  Call: (910) 207-5470
                 </a>
               </div>
             </div>
@@ -207,7 +207,7 @@ const SellFast = () => {
 
                   <div className="flex items-center gap-4 pt-2">
                     <Button type="submit" variant="gold" size="lg">Get My Offer</Button>
-                    <a href="tel:252-378-2016" className="text-sm font-semibold underline underline-offset-4">Or call 252-378-2016</a>
+                    <a href="tel:(910) 207-5470" className="text-sm font-semibold underline underline-offset-4">Or call (910) 207-5470</a>
                   </div>
 
                   {success && (
@@ -257,7 +257,7 @@ const SellFast = () => {
             <h2 className="text-2xl sm:text-3xl font-extrabold">How It Works</h2>
             <div className="mt-8 grid md:grid-cols-3 gap-5">
               {[
-                { step: 1, title: "Request an Offer", desc: "Fill out the form or call 252-378-2016 for a quick analysis." },
+                { step: 1, title: "Request an Offer", desc: "Fill out the form or call (910) 207-5470 for a quick analysis." },
                 { step: 2, title: "Review Options", desc: "Compare multiple offer types — cash or creative finance." },
                 { step: 3, title: "Sign & Close", desc: "Pick your closing date. Paid by wire, check, or certified funds." },
               ].map((s, i) => (
@@ -335,7 +335,7 @@ const SellFast = () => {
                 <a href="#seller-form">Get My Cash Offer</a>
               </Button>
               <Button asChild variant="goldOutline" size="xl">
-                <a href="tel:252-378-2016">Call 252-378-2016</a>
+                <a href="tel:(910) 207-5470">Call (910) 207-5470</a>
               </Button>
             </div>
           </div>
