@@ -30,6 +30,8 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} White House Investment Group. All rights reserved.</p>
           <span className="hidden sm:inline">•</span>
           <Link to="/privacy-policy" className="hover:opacity-80 underline underline-offset-4">Privacy Policy</Link>
+          <span className="hidden sm:inline">•</span>
+          <Link to="/terms-of-use" className="hover:opacity-80 underline underline-offset-4">Terms of Use</Link>
         </div>
       </div>
     </footer>
