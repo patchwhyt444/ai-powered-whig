@@ -11,6 +11,7 @@ import SellFast from "./pages/SellFast";
 import NotFound from "./pages/NotFound";
 import BuyersList from "./pages/BuyersList";
 import WholesalersJV from "./pages/WholesalersJV";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/sell-fast" element={<SellFast />} />
           <Route path="/buyers-list" element={<BuyersList />} />
           <Route path="/wholesalers-jv" element={<WholesalersJV />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

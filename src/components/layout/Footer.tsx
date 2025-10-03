@@ -26,7 +26,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} White House Investment Group. All rights reserved.
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+          <p>© {new Date().getFullYear()} White House Investment Group. All rights reserved.</p>
+          <span className="hidden sm:inline">•</span>
+          <Link to="/privacy-policy" className="hover:opacity-80 underline underline-offset-4">Privacy Policy</Link>
+        </div>
       </div>
     </footer>
   );
