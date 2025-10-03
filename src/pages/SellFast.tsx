@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const SellFast = () => {
   const [success, setSuccess] = useState(false);
+  const [smsConsent, setSmsConsent] = useState(false);
   const formRef = useRef<HTMLFormElement | null>(null);
 
   useEffect(() => {
@@ -199,8 +202,24 @@ const SellFast = () => {
                     <input id="photos" name="photos" type="file" multiple accept="image/*" className="mt-2 block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-primary file:text-primary-foreground hover:file:bg-primary/90" />
                   </div>
 
+                  <div className="flex items-start gap-3">
+                    <Checkbox 
+                      id="smsConsent" 
+                      checked={smsConsent}
+                      onCheckedChange={(checked) => setSmsConsent(checked === true)}
+                      required
+                    />
+                    <label htmlFor="smsConsent" className="text-sm leading-relaxed cursor-pointer">
+                      By checking this box, I consent to receive SMS from White House Investment Group in accordance with our{" "}
+                      <Link to="/privacy-policy" className="text-primary underline underline-offset-2 hover:opacity-80">
+                        Privacy Policy
+                      </Link>
+                      {" "}and Term of Condition
+                    </label>
+                  </div>
                   
                   {/* Hidden fields for FormSubmit configuration */}
+                  <input type="hidden" name="smsConsent" value={smsConsent ? "yes" : "no"} />
                   <input type="hidden" name="_subject" value="New submission from Sell Fast page" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_next" value={window.location.origin + "/sell-fast?success=true"} />
