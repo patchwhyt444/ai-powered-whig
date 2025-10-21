@@ -207,7 +207,6 @@ const SellFast = () => {
                       id="smsConsent" 
                       checked={smsConsent}
                       onCheckedChange={(checked) => setSmsConsent(checked === true)}
-                      required
                     />
                     <label htmlFor="smsConsent" className="text-sm leading-relaxed cursor-pointer">
                       By signing up via text, you agree to receive recurring text messages from White House Investment Group at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Reply HELP for help. Message frequency varies. Msg & data rates may apply. View our{" "}
