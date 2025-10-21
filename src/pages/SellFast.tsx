@@ -210,11 +210,14 @@ const SellFast = () => {
                       required
                     />
                     <label htmlFor="smsConsent" className="text-sm leading-relaxed cursor-pointer">
-                      By checking this box, I consent to receive SMS from White House Investment Group in accordance with our{" "}
+                      By signing up via text, you agree to receive recurring text messages from White House Investment Group at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Reply HELP for help. Message frequency varies. Msg & data rates may apply. View our{" "}
                       <Link to="/privacy-policy" className="text-primary underline underline-offset-2 hover:opacity-80">
                         Privacy Policy
                       </Link>
-                      {" "}and Term of Condition
+                      {" "}and{" "}
+                      <Link to="/terms-of-use" className="text-primary underline underline-offset-2 hover:opacity-80">
+                        Terms of Condition
+                      </Link>
                     </label>
                   </div>
                   
