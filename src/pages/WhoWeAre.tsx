@@ -87,23 +87,6 @@ const WhoWeAre = () => {
               Licensed representation across fix & flips, long-term rentals, short/mid-term rentals, multifamily, and commercial investments.
             </p>
           </div>
-          <div className="flex justify-center items-center gap-8 flex-wrap opacity-60">
-            <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-xs text-center">Partner Logo</span>
-            </div>
-            <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-xs text-center">Partner Logo</span>
-            </div>
-            <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-xs text-center">Partner Logo</span>
-            </div>
-            <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-xs text-center">Partner Logo</span>
-            </div>
-            <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-xs text-center">Partner Logo</span>
-            </div>
-          </div>
         </section>
 
         {/* Story Section */}
